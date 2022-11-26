@@ -54,7 +54,9 @@ table {
 body {
 	-webkit-text-size-adjust: none;
 }
-
+.project-title{
+	margin-top: -50px;
+}
 mark {
 	background-color: transparent;
 	color: inherit;
