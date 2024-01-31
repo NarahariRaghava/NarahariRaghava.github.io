@@ -73,7 +73,169 @@ input, select, textarea {
 }
 
 /* Basic */
+.timeline {
+	position: relative;
+	padding: 0;
+	list-style: none;
+}
 
+.timeline:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 40px; /* Adjust based on your layout */
+	width: 2px;
+	margin-left: -1.5px;
+	background-color: #e9ecef;
+}
+
+.timeline-item {
+	position: relative;
+	margin-bottom: 20px;
+	padding-left: 80px; /* Adjust based on your layout */
+	min-height: 50px;
+}
+
+.timeline-icon {
+	position: absolute;
+	left: 22px; /* Adjust based on your layout */
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	border-radius: 50%;
+	background: white;
+	border: 2px solid #e9ecef; /* Optional: adds a border around the logo */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timeline-icon img {
+	width: 80%; /* Scale your image to fit within the icon circle */
+	height: auto;
+}
+
+.timeline-content {
+	padding: 10px 40px;
+	background-color: white;
+	position: relative;
+	border-radius: 3px;
+	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content h4 {
+	margin-top: 0;
+	font-weight: bold;
+}
+
+.timeline-content p {
+	margin-bottom: 0;
+}
+
+/* Add arrows to the timeline items */
+.timeline-content:after {
+	content: '';
+	position: absolute;
+	left: -15px;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-right: 15px solid white;
+}
+#f5f5f5
+#two {
+	background-color: #f5f5f5; /* Light grey background for the whole section */
+	padding: 50px 0; /* More whitespace */
+	color: #333; /* Dark text color for contrast */
+}
+
+.skills-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+	gap: 20px; /* Space between skills */
+}
+
+.skill-item {
+	background-color: #ffffff; /* White background for each skill */
+	border: 1px solid #e1e1e1; /* Subtle border */
+	padding: 20px;
+	border-radius: 8px; /* Rounded corners */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.skill-item:hover {
+	transform: translateY(-5px); /* Slight lift effect on hover */
+	box-shadow: 0 4px 8px rgba(52, 86, 139, 0.2); /* Shadow with a tint of Classic Blue */
+}
+
+.icon {
+	color: #34568B; /* Classic Blue for icons */
+	margin-right: 10px;
+}
+.skill-details {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.9em; /* Slightly smaller font size for clean look */
+	color: #2a3f5d; /* Dark shade of blue for text */
+}
+
+
+
+h2 {
+	margin-bottom: 30px; /* More space between the title and the skill items */
+	color: #34568B; /* Classic Blue for the section heading */
+	font-weight: normal; /* Modern look prefers lighter font weights */
+}
+.skills-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
+}
+
+.skill-item {
+	flex-basis: calc(33.333% - 20px); /* Adjust the percentage based on the number of items per row */
+	border: 1px solid #e1e1e1; /* Light grey border */
+	border-radius: 8px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+	font-family: 'Montserrat', sans-serif; /* Example font */
+}
+
+.skill-item:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	border-color: #34568B; /* Classic Blue for the hover border */
+}
+
+.icon {
+	color: #34568B; /* Classic Blue for the icons */
+	margin-right: 10px;
+	font-size: 1.5em; /* Larger icons */
+}
+
+
+h2.skills-title {
+	color: #443266; /* Classic Blue for the section heading */
+	font-size: 2em; /* Larger heading */
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+
+#34568B
+
+
+
+#three .features li p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 	html {
 		box-sizing: border-box;
 	}
@@ -1788,7 +1950,7 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #4acaa8;
+		color: #777777;
 		font-size: 3.5em;
 	}
 
@@ -2703,7 +2865,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
+		background:#4acaa8 ;
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
